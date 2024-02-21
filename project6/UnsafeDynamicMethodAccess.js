@@ -7,7 +7,6 @@ window.addEventListener('message', (ev) => {
     window[message.name](message.payload); // NOT OK, but reported by UnsafeDynamicMethodAccess.ql [INCONSISTENCY]
     new window[message.name](message.payload); // NOT OK, but reported by UnsafeDynamicMethodAccess.ql [INCONSISTENCY]
     new window[message.name](message.payload); // NOT OK, but reported by UnsafeDynamicMethodAccess.ql [INCONSISTENCY]
-    new window[message.name](message.payload); // NOT OK, but reported by UnsafeDynamicMethodAccess.ql [INCONSISTENCY]
     window["HTMLElement" + message.name](message.payload); // OK - concatenation restricts choice of methods
     window[`HTMLElement${message.name}`](message.payload); // OK - concatenation restricts choice of methods
     
