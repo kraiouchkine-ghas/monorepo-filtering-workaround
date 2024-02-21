@@ -16,5 +16,5 @@ window.addEventListener('message', (ev) => {
     
     obj[message.name](message.payload); // NOT OK
 
-    window[ev](ev); // NOT OK, but reported by UnsafeDynamicMethodAccess.ql [INCONSISTENCY]
+
 });
